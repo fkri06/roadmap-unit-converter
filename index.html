@@ -9,7 +9,44 @@
 </head>
 
 <body>
-    <button id="myButton">Click Me</button>
+    <main class="main-container">
+        <div class="converter-box">
+            <div class="converter-nav">
+                <h1>Unit Converter</h1>
+                <div class="converter-link">
+                    <ul>
+                        <li>
+                            <a href="">Length</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="">Weight</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="">Temperature</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="converter-content">
+                <label for="unitValue">Enter the length to convert</label>
+                <input type="text" id="unitValue">
+
+                <label for="unitFrom">Unit to convert from</label>
+                <input type="text" id="unitFrom">
+
+                <label for="unitTo">Unit to convert to</label>
+                <input type="text" id="unitTo">
+            </div>
+
+            <div class="button">
+                <button>Convert</button>
+            </div>
+        </div>
+    </main>
     <script src="index.js"></script>
 </body>
 
