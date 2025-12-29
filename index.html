@@ -16,23 +16,23 @@
                 <div class="converter-link">
                     <ul>
                         <li>
-                            <a href="">Length</a>
+                            <a href="" onclick="doLength()">Length</a>
                         </li>
                     </ul>
                     <ul>
                         <li>
-                            <a href="">Weight</a>
+                            <a href="" onclick="doWeight()">Weight</a>
                         </li>
                     </ul>
                     <ul>
                         <li>
-                            <a href="">Temperature</a>
+                            <a href="" onclick="doTemp()">Temperature</a>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="converter-content">
-                <label for="unitValue">Enter the length to convert</label>
+                <label for="unitValue">Enter the value to convert</label>
                 <input type="text" id="unitValue">
 
                 <label for="unitFrom">Unit to convert from</label>
@@ -42,7 +42,7 @@
                 <input type="text" id="unitTo">
             </div>
 
-            <div class="button">
+            <div id="button">
                 <button>Convert</button>
             </div>
         </div>
