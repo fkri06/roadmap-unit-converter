@@ -2,6 +2,7 @@ const unitValue = document.getElementById("unitValue");
 const unitFrom = document.getElementById("unitFrom");
 const unitTo = document.getElementById("unitTo");
 const convertButton = document.getElementById("button");
+const resetButton = document.getElementById("resetButton");
 const msg = document.getElementById("msg");
 
 const unitFactors = {
@@ -37,5 +38,12 @@ convertButton.addEventListener("click", () => {
     document.getElementById("convertButton").style.display = "none";
 
     // Display the reset button;
-    document.getElementById("resetButton").style.display = "block";
+    document.getElementById("resetButtonDiv").style.display = "block";
+})
+
+resetButton.addEventListener("click", () => {
+    document.getElementById("result").style.display = "none";
+    document.getElementsByClassName("converter-content")[0].style.display = "block";
+    document.getElementById("convertButton").style.display = "block";
+    document.getElementById("resetButtonDiv").style.display = "none";
 })
