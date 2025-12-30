@@ -20,6 +20,7 @@ h1 {
     padding: 10px 15px;
 }
 
+select,
 input {
     display: block;
 }
@@ -46,6 +47,7 @@ input {
     justify-content: space-between;
 }
 
-.converter-content input {
+.converter-content input,
+.converter-content select {
     margin-bottom: 0.5rem;
 }
