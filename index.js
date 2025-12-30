@@ -15,3 +15,11 @@ const unitFactors = {
     "mile": 1609.344
 }
 
+button.addEventListener("click", () => {
+    if (unitValue.value === "" || unitFrom.value === "" || unitTo.value === "") {
+        msg.textContent = `Error: field empty`;
+    } else {
+        msg.textContent = ``;
+    }
+
+})
