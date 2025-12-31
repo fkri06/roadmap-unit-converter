@@ -38,13 +38,30 @@ convertButton.addEventListener("click", () => {
         msg.textContent = ``;
     }
 
-    const unitFromFactor = unitFactors[unitFrom.value];
-    const unitToFactor = unitFactors[unitTo.value];
-    const value = Number(unitValue.value);
+    const unitFromTemp = unitFrom.value;
+    const unitToTemp = unitTo.value;
+    const userInputValue = Number(unitValue.value);
+    let value;
 
-    const result = ((value * unitFromFactor) / unitToFactor).toFixed(4);
+    if (unitFromTemp === "c" && unitToTemp === "f") {
+        value = celciusToFahrenheit(userInputValue);
+    } else if (unitFromTemp === "c" && unitToTemp === "k") {
+        value = celciusToKelvin(userInputValue);
+    } else if (unitFromTemp === "f" && unitToTemp === "c") {
+        value = fahrenheitToCelcius(userInputValue);
+    } else if (unitFromTemp === "f" && unitToTemp === "k") {
+        value = fahrenheitToKelvin(userInputValue);
+    } else if (unitFromTemp === "k" && unitToTemp === "c") {
+        value = kelvinToCelcius(userInputValue);
+    } else if (unitFromTemp === "k" && unitToTemp === "f") {
+        value = kelvinToFahrenheit(userInputValue);
+    } else {
+        value = userInputValue;
+    }
 
-    document.getElementById("conversionResult").textContent = `${value}${unitFrom.value} = ${result}${unitTo.value}`;
+    const result = value.toFixed(4);
+
+    document.getElementById("conversionResult").textContent = `${userInputValue}${unitFromTemp} = ${result}${unitToTemp}`;
     document.getElementById("result").style.display = "block";
 
     // Hide content and the convert button
