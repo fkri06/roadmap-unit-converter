@@ -5,13 +5,30 @@ const convertButton = document.getElementById("button");
 const resetButton = document.getElementById("resetButton");
 const msg = document.getElementById("msg");
 
-const unitFactors = {
-    "mg": 0.001,
-    "g": 1,
-    "kg": 1000,
-    "oz": 28.3495,
-    "lbs": 453,
+function celciusToFahrenheit(value) {
+    return (value * (9 / 5)) + 32;
 }
+
+function celciusToKelvin(value) {
+    return value + 273.15;
+}
+
+function fahrenheitToCelcius(value) {
+    return (value - 32) * (5 / 9);
+}
+
+function fahrenheitToKelvin(value) {
+    return (value - 32) * (5 / 9) + 273.15;
+}
+
+function kelvinToFahrenheit(value) {
+    return (value - 273.15) * (9 / 5) + 32;
+}
+
+function kelvinToCelcius(value) {
+    return (value - 273.15);
+}
+
 
 convertButton.addEventListener("click", () => {
     if (unitValue.value === "") {
